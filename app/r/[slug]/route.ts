@@ -24,7 +24,7 @@ export async function GET(request: NextRequest, { params }: RedirectRouteProps) 
   });
 
   if (!trackedLink) {
-    return NextResponse.redirect(new URL("/", request.url), { status: 302 });
+    return NextResponse.redirect("https://antonioferriani.com/", { status: 302 });
   }
 
   await prisma.linkClick.create({
